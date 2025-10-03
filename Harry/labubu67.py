@@ -62,7 +62,7 @@ print("""
       
       
       """)
-for intento in range(intentos):
+while intentos > 0:
      if intentos == 6:
       print("""
               +---+
@@ -140,14 +140,14 @@ for intento in range(intentos):
       #Agregamos la letra a la lista de letras usadas
       letras_usadas.append(letra)
       #Verificamos si la letra está en la palabra
-     elif letra in palabra_lista:
+      if letra in palabra_lista:
           print("La letra está en la palabra")
           #Reemplazamos los guiones bajos por la letra en la posición correcta
           for i in range(len(palabra_lista)):
                if palabra_lista[i] == letra:
                     guiones[i] = letra
           #Verificamos si la persona ha adivinado la palabra
-     if letra not in palabra_lista:
+      if letra not in palabra_lista:
         intentos -= 1
         print("La letra no está en la palabra")
         continue
